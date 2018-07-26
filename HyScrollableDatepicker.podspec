@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HyScrollableDatepicker"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of HyScrollableDatepicker."
+  s.version      = "2.1.1"
+  s.summary      = "Expend MonthPicker for ScrollableDatepicker."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,8 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                    Expend MonthPicker for ScrollableDatepicker.
+                    It's will fill details in future
                    DESC
 
   s.homepage     = "https://github.com/hopy11/ScrollableDatepicker"
@@ -63,8 +65,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  # s.platform     = :ios
+  s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +81,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://git@github.com:hopy11/ScrollableDatepicker.git", :tag => "#{s.version}" }
+  s.source       = { :git => 'https://git@github.com:hopy11/ScrollableDatepicker.git', :tag => "#{s.version}" }
+  s.source = {:git=>'https://github.com/CocoaPods/Specs.git',:tag=>"#{s.version}"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

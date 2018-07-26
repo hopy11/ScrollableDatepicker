@@ -82,7 +82,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => 'https://git@github.com:hopy11/ScrollableDatepicker.git', :tag => "#{s.version}" }
-  s.source = {:git=>'https://github.com/CocoaPods/Specs.git',:tag=>"#{s.version}"}
+  s.source = {:git=>'https://github.com/CocoaPods/Specs.git',tag:"v0.32.1"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

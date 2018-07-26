@@ -13,7 +13,7 @@ open class DayCell: UICollectionViewCell {
     @IBOutlet public weak var monthLabel: UILabel!
     @IBOutlet public weak var selectorView: UIView!
     
-    enum CellType {
+    public enum CellType {
         case day
         case month
     }
@@ -43,14 +43,25 @@ open class DayCell: UICollectionViewCell {
             monthLabel.text = formatter.string(from: date).uppercased()
             monthLabel.font = style.monthTextFont ?? monthLabel.font
             monthLabel.textColor = style.monthTextColor ?? monthLabel.textColor
-            
-            selectorView.backgroundColor = style.selectorColor ?? UIColor.clear
-            backgroundColor = style.backgroundColor ?? backgroundColor
         }else if type == .month{
+            formatter.dateFormat = "MM"
+            dateLabel.text = formatter.string(from: date)
+            dateLabel.font = style.dateTextFont ?? dateLabel.font
+            dateLabel.textColor = style.dateTextColor ?? dateLabel.textColor
             
+            formatter.dateFormat = "MMMM"
+            weekDayLabel.text = formatter.string(from: date).uppercased()
+            weekDayLabel.font = style.monthTextFont ?? monthLabel.font
+            weekDayLabel.textColor = style.monthTextColor ?? monthLabel.textColor
+            
+            formatter.dateFormat = "YYYY"
+            monthLabel.text = formatter.string(from: date).uppercased()
+            monthLabel.font = style.monthTextFont ?? monthLabel.font
+            monthLabel.textColor = style.monthTextColor ?? monthLabel.textColor
         }
         
-        
+        selectorView.backgroundColor = style.selectorColor ?? UIColor.clear
+        backgroundColor = style.backgroundColor ?? backgroundColor
     }
 
 }

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
                 dates.append(Date(timeIntervalSinceNow: Double(day * 86400)))
             }
 
+            datepicker.cellType = .month
             datepicker.dates = dates
             datepicker.selectedDate = Date()
             datepicker.delegate = self

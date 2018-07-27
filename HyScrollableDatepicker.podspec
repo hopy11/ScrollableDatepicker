@@ -94,9 +94,9 @@ Pod::Spec.new do |s|
   #
 
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.source_files = "Sources","Sources/*.*"
+  s.source_files = "Sources"
   # s.exclude_files = "Classes/Exclude"
-
+  # s.resource_bundles = { "ScrollableDatepicker" => ["Sources/*.xib"] }
   # s.public_header_files = "Classes/**/*.h"
 
 
